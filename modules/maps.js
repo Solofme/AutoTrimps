@@ -214,6 +214,8 @@ function autoMap() {
                 )
             )
         )
+		&& !(getPageSetting('novmsc2') == true && game.global.runningChallengeSquared)
+		&& !(game.global.challengeActive != "Daily" && game.global.totalVoidMaps > 0 && getPageSetting('onlystackedvoids') == true && voidArrayDoneS.length < 1)
     );
 
     var voidArrayDoneS = [];
@@ -224,15 +226,6 @@ function autoMap() {
                 voidArrayDoneS.push(theMapz);
             }
         }
-    }
-
-    if (
-        (game.global.totalVoidMaps <= 0) ||
-        (!needToVoid) ||
-        (getPageSetting('novmsc2') == true && game.global.runningChallengeSquared) ||
-        (game.global.challengeActive != "Daily" && game.global.totalVoidMaps > 0 && getPageSetting('onlystackedvoids') == true && voidArrayDoneS.length < 1)
-    ) {
-        doVoids = false;
     }
 
     //Prestige
@@ -543,7 +536,9 @@ function autoMap() {
             }
             break;
         }
-    }
+    } else {
+		doVoids = false;
+	}
 
     //Skip Spires
     if (!preSpireFarming && getPageSetting('SkipSpires') == 1 && ((game.global.challengeActive != 'Daily' && isActiveSpireAT()) || (game.global.challengeActive == 'Daily' && disActiveSpireAT()))) {
