@@ -163,9 +163,10 @@ function rebuildDataIndex(){for(var a=0;a<allSaveData.length-1;a++)dataBase[a]={
 function checkIndexConsistency(){for(var a=0;a<dataBase.length-1;a++)if(dataBase[a].Index!=a){databaseDirtyFlag=[!0,'index',a];break}}
 function checkWorldSequentiality(){for(var a,b,c,d=1;d<dataBase.length-1;d++){if(lastworldEntry=dataBase[d-1],currentworldEntry=dataBase[d],nextworldEntry=dataBase[d+1],a=lastworldEntry.World,b=currentworldEntry.World,c=nextworldEntry.World,a>b&&1!=b){databaseDirtyFlag.State=!0,databaseDirtyFlag.Reason='descending',databaseDirtyFlag.Index=d;break}if(a>b&&1==b&&a==c){databaseDirtyFlag.State=!0,databaseDirtyFlag.Reason='badportal',databaseDirtyFlag.Index=d;break}}}
 function drawGraph(a,b){
-	console.log("a: " + a + ", b: " + b);
+	// console.log("a: " + a + ", b: " + b);
 	var c=document.getElementById('graphSelection');
-	a ? (c.selectedIndex--, 0 > c.selectedIndex && (c.selectedIndex=0) ) : b && c.selectedIndex != c.options.length - 1 && c.selectedIndex++, setGraphData(c.value)
+	setGraphData(c.value);
+	a ? (c.selectedIndex--, 0 > c.selectedIndex && (c.selectedIndex=0) ) : b && c.selectedIndex != c.options.length - 1 && c.selectedIndex++; 
 }
 
 function setGraphData(graph) {
@@ -560,7 +561,7 @@ function setGraphData(graph) {
             yTitle = 'Overkilled Cells';
             yType = logSetting;
             break;
-}
+	}
 
     function allPurposeGraph(item, extraChecks, typeCheck, funcToRun, useAccumulator) {
         var currentPortal = -1;
