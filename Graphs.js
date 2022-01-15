@@ -341,7 +341,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Helium/Hour';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             yminFloor = 0;
             precision = 2;
             break;
@@ -354,7 +354,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Helium';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             break;
         case 'HeHr % / LifetimeHe':
             graphData = allPurposeGraph('hehr', true, "string");
@@ -362,7 +362,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'He/Hr % of LifetimeHe';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             precision = 4;
             break;
         case 'He % / LifetimeHe':
@@ -371,7 +371,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'He % of LifetimeHe';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             precision = 4;
             break;
         case 'Radon - Rn/Hr':
@@ -383,7 +383,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Radon/Hour';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             yminFloor = 0;
             precision = 2;
             break;
@@ -396,7 +396,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Radon';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             break;
         case 'RnHr % / LifetimeHe':
             graphData = allPurposeGraph('rnhr', true, "string");
@@ -404,7 +404,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Rn/Hr % of LifetimeHe';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             precision = 4;
             break;
         case 'Rn % / LifetimeHe':
@@ -413,7 +413,7 @@ function setGraphData(graph) {
             xTitle = 'Zone';
             yTitle = 'Rn % of LifetimeRn';
             // yType = 'Linear';
-			yType = 'Logarithmic';
+			yType = 'logarithmic';
             precision = 4;
             break;
         case 'Void Map History':
