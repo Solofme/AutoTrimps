@@ -197,7 +197,7 @@ function setGraphData(graph) {
             title = 'Void Maps (completed)';
             xTitle = 'Portal';
             yTitle = 'Number of Void Maps';
-            yType = 'Linear';
+            yType = 'linear';
             break;
 
         case 'Nullifium Gained':
@@ -238,7 +238,7 @@ function setGraphData(graph) {
                 title = "Average " + title + " = " + averagenulli;
             xTitle = 'Portal';
             yTitle = 'Nullifium Gained';
-            yType = 'Linear';
+            yType = 'linear';
             break;
 
         case 'Loot Sources':
@@ -280,7 +280,7 @@ function setGraphData(graph) {
             title = '(#2) Time to Clear Zone';
             xTitle = 'Zone';
             yTitle = 'Clear Time';
-            yType = 'Linear';
+            yType = 'linear';
             valueSuffix = ' Seconds';
             break;
         case 'Clear Time':
@@ -291,7 +291,7 @@ function setGraphData(graph) {
             title = 'Time to clear zone';
             xTitle = 'Zone';
             yTitle = 'Clear Time';
-            yType = 'Linear';
+            yType = 'linear';
             valueSuffix = ' Seconds';
             yminFloor = 0;
             break;
@@ -340,7 +340,7 @@ function setGraphData(graph) {
             title = 'Helium/Hour (Cumulative)';
             xTitle = 'Zone';
             yTitle = 'Helium/Hour';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             yminFloor = 0;
             precision = 2;
@@ -353,7 +353,7 @@ function setGraphData(graph) {
             title = 'Helium (Lifetime Total)';
             xTitle = 'Zone';
             yTitle = 'Helium';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             break;
         case 'HeHr % / LifetimeHe':
@@ -361,7 +361,7 @@ function setGraphData(graph) {
             title = 'He/Hr % of LifetimeHe';
             xTitle = 'Zone';
             yTitle = 'He/Hr % of LifetimeHe';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             precision = 4;
             break;
@@ -370,7 +370,7 @@ function setGraphData(graph) {
             title = 'He % of LifetimeHe';
             xTitle = 'Zone';
             yTitle = 'He % of LifetimeHe';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             precision = 4;
             break;
@@ -382,7 +382,7 @@ function setGraphData(graph) {
             title = 'Radon/Hour (Cumulative)';
             xTitle = 'Zone';
             yTitle = 'Radon/Hour';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             yminFloor = 0;
             precision = 2;
@@ -395,7 +395,7 @@ function setGraphData(graph) {
             title = 'Radon (Lifetime Total)';
             xTitle = 'Zone';
             yTitle = 'Radon';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             break;
         case 'RnHr % / LifetimeHe':
@@ -403,7 +403,7 @@ function setGraphData(graph) {
             title = 'Rn/Hr % of LifetimeHe';
             xTitle = 'Zone';
             yTitle = 'Rn/Hr % of LifetimeHe';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             precision = 4;
             break;
@@ -412,7 +412,7 @@ function setGraphData(graph) {
             title = 'Rn % of LifetimeRn';
             xTitle = 'Zone';
             yTitle = 'Rn % of LifetimeRn';
-            // yType = 'Linear';
+            // yType = 'linear';
 			yType = 'logarithmic';
             precision = 4;
             break;
@@ -421,35 +421,35 @@ function setGraphData(graph) {
             title = 'Void Map History (voids finished during the same level acquired (with RunNewVoids) are not counted/tracked)';
             xTitle = 'Zone';
             yTitle = 'Number of Void Maps';
-            yType = 'Linear';
+            yType = 'linear';
             break;
         case 'Map Bonus':
             graphData = allPurposeGraph('mapbonus', true, "number");
             title = 'Map Bonus History';
             xTitle = 'Zone';
             yTitle = 'Map Bonus Stacks';
-            yType = 'Linear';
+            yType = 'linear';
             break;
         case 'Coordinations':
             graphData = allPurposeGraph('coord', true, "number");
             title = 'Coordination History';
             xTitle = 'Zone';
             yTitle = 'Coordination';
-            yType = 'Linear';
+            yType = 'linear';
             break;
         case 'Amalgamators':
             graphData = allPurposeGraph('amals', true, "number");
             title = 'Amalgamators';
             xTitle = 'Zone';
             yTitle = 'Amalgamators';
-            yType = 'Linear';
+            yType = 'linear';
             break;
         case 'Fluffy XP':
             graphData = allPurposeGraph('fluffy', true, "number");
             title = 'Fluffy XP (Lifetime Total)';
             xTitle = 'Zone (starts at 300)';
             yTitle = 'Fluffy XP';
-            yType = 'Linear';
+            yType = 'linear';
             xminFloor = 300;
             break;
         case 'Fluffy XP PerHour':
@@ -482,7 +482,7 @@ function setGraphData(graph) {
             title = 'Fluffy XP/Hour (Cumulative)';
             xTitle = 'Zone';
             yTitle = 'Fluffy XP/Hour';
-            yType = 'Linear';
+            yType = 'linear';
             xminFloor = 1;
             break;
         case 'Scruffy XP':
@@ -490,7 +490,7 @@ function setGraphData(graph) {
             title = 'Scruffy XP (Lifetime Total)';
             xTitle = 'Zone';
             yTitle = 'Scruffy XP';
-            yType = 'Linear';
+            yType = 'linear';
             xminFloor = 0;
             break;
         case 'Scruffy XP PerHour':
@@ -523,7 +523,7 @@ function setGraphData(graph) {
             title = 'Scruffy XP/Hour (Cumulative)';
             xTitle = 'Zone';
             yTitle = 'Scruffy XP/Hour';
-            yType = 'Linear';
+            yType = 'linear';
             xminFloor = 1;
             break;
         case 'OverkillCells':
@@ -557,7 +557,7 @@ function setGraphData(graph) {
             title = 'Overkilled Cells';
             xTitle = 'Zone';
             yTitle = 'Overkilled Cells';
-            yType = 'Linear';
+            yType = 'linear';
             break;
 }
 
