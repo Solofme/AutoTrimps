@@ -618,10 +618,11 @@ function setGraphData(graph) {
             prettify(this.y) + valueSuffix + '</b><br>';
     };
     var additionalParams = {};
-    if (oldData != JSON.stringify(graphData)) {
+	// Graph is deleted on Toggle, so redraw even if data is the same.
+    // if (oldData != JSON.stringify(graphData)) {
         saveSelectedGraphs();
         setGraph(title, xTitle, yTitle, valueSuffix, formatter, graphData, yType, xminFloor, yminFloor, additionalParams);
-    }
+    // }
     if (graph == 'Loot Sources') {
         chart1.xAxis[0].tickInterval = 1;
         chart1.xAxis[0].minorTickInterval = 1;
