@@ -162,7 +162,11 @@ function chkdsk(){rebuildDataIndex(),checkIndexConsistency(),checkWorldSequentia
 function rebuildDataIndex(){for(var a=0;a<allSaveData.length-1;a++)dataBase[a]={Index:a,Portal:allSaveData[a].totalPortals,Challenge:allSaveData[a].challenge,World:allSaveData[a].world},portalRunArray.push({Index:a,Portal:allSaveData[a].totalPortals,Challenge:allSaveData[a].challenge}),"undefined"==typeof portalExistsArray[allSaveData[a].totalPortals]?portalExistsArray[allSaveData[a].totalPortals]={Exists:!0,Row:portalRunIndex,Index:a,Challenge:allSaveData[a].challenge}:(databaseDirtyFlag.State=!0,databaseDirtyFlag.Reason="oreoportal",databaseDirtyFlag.Index=a,row=portalExistsArray[allSaveData[a].totalPortals].Row),portalRunIndex++}
 function checkIndexConsistency(){for(var a=0;a<dataBase.length-1;a++)if(dataBase[a].Index!=a){databaseDirtyFlag=[!0,'index',a];break}}
 function checkWorldSequentiality(){for(var a,b,c,d=1;d<dataBase.length-1;d++){if(lastworldEntry=dataBase[d-1],currentworldEntry=dataBase[d],nextworldEntry=dataBase[d+1],a=lastworldEntry.World,b=currentworldEntry.World,c=nextworldEntry.World,a>b&&1!=b){databaseDirtyFlag.State=!0,databaseDirtyFlag.Reason='descending',databaseDirtyFlag.Index=d;break}if(a>b&&1==b&&a==c){databaseDirtyFlag.State=!0,databaseDirtyFlag.Reason='badportal',databaseDirtyFlag.Index=d;break}}}
-function drawGraph(a,b){var c=document.getElementById('graphSelection');a?(c.selectedIndex--,0>c.selectedIndex&&(c.selectedIndex=0)):b&&c.selectedIndex!=c.options.length-1&&c.selectedIndex++,setGraphData(c.value)}
+function drawGraph(a,b){
+	console.log(a);
+	var c=document.getElementById('graphSelection');
+	a ? (c.selectedIndex--, 0 > c.selectedIndex && (c.selectedIndex=0) ) : b && c.selectedIndex != c.options.length - 1 && c.selectedIndex++, setGraphData(c.value)
+}
 
 function setGraphData(graph) {
     var title, xTitle, yTitle, yType, valueSuffix, series, formatter, xminFloor = 1,
