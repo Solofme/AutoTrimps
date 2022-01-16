@@ -1049,38 +1049,17 @@ function Praiding() {
 					recycleMap(getMapIndex(repMap5));
 					repMap5 = undefined;
 				}
+
 				debug("Map Loop");
-				if (pcheckmap5() == true && pcheck5() == true && pMap5 == undefined && !mapbought5 && game.global.preMapsActive && !prestraid) {
-					debug("Check complete for 5th map");
-					plusPres5();
+				if (pcheckmap1() == true && pcheck1() == true && pMap1 == undefined && !mapbought1 && game.global.preMapsActive && !prestraid) {
+					debug("Check complete for 1st map");
+					plusPres1();
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
-						mapbought5 = true;
-						if (mapbought5) {
-							pMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("5th map bought");
-						}
-					}
-				} else if (pcheckmap4() == true && pcheck4() == true && pMap4 == undefined && !mapbought4 && game.global.preMapsActive && !prestraid) {
-					debug("Check complete for 4th map");
-					plusPres4();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						mapbought4 = true;
-						if (mapbought4) {
-							pMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("4th map bought");
-						}
-					}
-				} else if (pcheckmap3() == true && pcheck3() == true && pMap3 == undefined && !mapbought3 && game.global.preMapsActive && !prestraid) {
-					debug("Check complete for 3rd map");
-					plusPres3();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						mapbought3 = true;
-						if (mapbought3) {
-							pMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("3rd map bought");
+						mapbought1 = true;
+						if (mapbought1) {
+							pMap1 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("1st map bought");
 						}
 					}
 				} else if (pcheckmap2() == true && pcheck2() == true && pMap2 == undefined && !mapbought2 && game.global.preMapsActive && !prestraid) {
@@ -1094,15 +1073,37 @@ function Praiding() {
 							debug("2nd map bought");
 						}
 					}
-				} else if (pcheckmap1() == true && pcheck1() == true && pMap1 == undefined && !mapbought1 && game.global.preMapsActive && !prestraid) {
-					debug("Check complete for 1st map");
-					plusPres1();
+				} else if (pcheckmap3() == true && pcheck3() == true && pMap3 == undefined && !mapbought3 && game.global.preMapsActive && !prestraid) {
+					debug("Check complete for 3rd map");
+					plusPres3();
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
-						mapbought1 = true;
-						if (mapbought1) {
-							pMap1 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("1st map bought");
+						mapbought3 = true;
+						if (mapbought3) {
+							pMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("3rd map bought");
+						}
+					}
+				} else if (pcheckmap4() == true && pcheck4() == true && pMap4 == undefined && !mapbought4 && game.global.preMapsActive && !prestraid) {
+					debug("Check complete for 4th map");
+					plusPres4();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						mapbought4 = true;
+						if (mapbought4) {
+							pMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("4th map bought");
+						}
+					}
+				} else if (pcheckmap5() == true && pcheck5() == true && pMap5 == undefined && !mapbought5 && game.global.preMapsActive && !prestraid) {
+					debug("Check complete for 5th map");
+					plusPres5();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						mapbought5 = true;
+						if (mapbought5) {
+							pMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("5th map bought");
 						}
 					}
 				}
@@ -1552,73 +1553,8 @@ function dailyPraiding() {
 				game.options.menu.repeatUntil.enabled = 2;
 			}
 			if (game.global.preMapsActive && !game.global.mapsActive && !dprestraid) {
-				if (drepMap1 != undefined) {
-					recycleMap(getMapIndex(drepMap1));
-					drepMap1 = undefined;
-				}
-				if (drepMap2 != undefined) {
-					recycleMap(getMapIndex(drepMap2));
-					drepMap2 = undefined;
-				}
-				if (drepMap3 != undefined) {
-					recycleMap(getMapIndex(drepMap3));
-					drepMap3 = undefined;
-				}
-				if (drepMap4 != undefined) {
-					recycleMap(getMapIndex(drepMap4));
-					drepMap4 = undefined;
-				}
-				if (drepMap5 != undefined) {
-					recycleMap(getMapIndex(drepMap5));
-					drepMap5 = undefined;
-				}
-
 				debug("Map Loop");
-				if (pcheckmap5() == true && pcheck5() == true && dpMap5 == undefined && !dmapbought5 && game.global.preMapsActive && !dprestraid) {
-					debug("Check complete for 5th map");
-					plusPres5();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						dmapbought5 = true;
-						if (dmapbought5) {
-							dpMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("5th map bought");
-						}
-					}
-				} else if (pcheckmap4() == true && pcheck4() == true && dpMap4 == undefined && !dmapbought4 && game.global.preMapsActive && !dprestraid) {
-					debug("Check complete for 4th map");
-					plusPres4();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						dmapbought4 = true;
-						if (dmapbought4) {
-							dpMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("4th map bought");
-						}
-					}
-				} else if (pcheckmap3() == true && pcheck3() == true && dpMap3 == undefined && !dmapbought3 && game.global.preMapsActive && !dprestraid) {
-					debug("Check complete for 3rd map");
-					plusPres3();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						dmapbought3 = true;
-						if (dmapbought3) {
-							dpMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("3rd map bought");
-						}
-					}
-				} else if (pcheckmap2() == true && pcheck2() == true && dpMap2 == undefined && !dmapbought2 && game.global.preMapsActive && !dprestraid) {
-					debug("Check complete for 2nd map");
-					plusPres2();
-					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
-						buyMap();
-						dmapbought2 = true;
-						if (dmapbought2) {
-							dpMap2 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
-							debug("2nd map bought");
-						}
-					}
-				} else if (pcheckmap1() == true && pcheck1() == true && dpMap1 == undefined && !dmapbought1 && game.global.preMapsActive && !dprestraid) {
+				if (pcheckmap1() == true && pcheck1() == true && dpMap1 == undefined && !dmapbought1 && game.global.preMapsActive && !dprestraid) {
 					debug("Check complete for 1st map");
 					plusPres1();
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
@@ -1630,7 +1566,54 @@ function dailyPraiding() {
 						}
 					}
 				}
-
+				if (pcheckmap2() == true && pcheck2() == true && dpMap2 == undefined && !dmapbought2 && game.global.preMapsActive && !dprestraid) {
+					debug("Check complete for 2nd map");
+					plusPres2();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						dmapbought2 = true;
+						if (dmapbought2) {
+							dpMap2 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("2nd map bought");
+						}
+					}
+				}
+				if (pcheckmap4() == true && pcheck4() == true && dpMap4 == undefined && !dmapbought4 && game.global.preMapsActive && !dprestraid) {
+					debug("Check complete for 4th map");
+					plusPres4();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						dmapbought4 = true;
+						if (dmapbought4) {
+							dpMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("4th map bought");
+						}
+					}
+				}
+				if (pcheckmap3() == true && pcheck3() == true && dpMap3 == undefined && !dmapbought3 && game.global.preMapsActive && !dprestraid) {
+					debug("Check complete for 3rd map");
+					plusPres3();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						dmapbought3 = true;
+						if (dmapbought3) {
+							dpMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("3rd map bought");
+						}
+					}
+				}
+				if (pcheckmap5() == true && pcheck5() == true && dpMap5 == undefined && !dmapbought5 && game.global.preMapsActive && !dprestraid) {
+					debug("Check complete for 5th map");
+					plusPres5();
+					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
+						buyMap();
+						dmapbought5 = true;
+						if (dmapbought5) {
+							dpMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
+							debug("5th map bought");
+						}
+					}
+				}
 				if (!dmapbought1 && !dmapbought2 && !dmapbought3 && !dmapbought4 && !dmapbought5) {
 					if (getPageSetting('AutoMaps') == 0 && !dprestraid) {
 						autoTrimpSettings["AutoMaps"].value = 1;
