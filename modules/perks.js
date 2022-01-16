@@ -8,7 +8,7 @@ queuescript.type = 'text/javascript';
 queuescript.src = 'https://Solofme.github.io/AutoTrimps/FastPriorityQueue.js';
 head.appendChild(queuescript);
 if (game.global.universe == 1) {
-//                    [looting, toughness, power,	motivation,	pheromones,	artisanistry, carpentry,  resilience, coordinated, resourceful,	overkill, cunning, curious,	classy]
+//                  [looting, toughness, power,	motivation,	pheromones,	artisanistry, carpentry,  resilience, coordinated, resourceful,	overkill, cunning, curious,	classy]
 var preset_space  = [0,    	  0, 	 	 0,    	0, 	  		0,   		0, 	 		  0, 	  	  0, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
 var preset_Zek059 = [7,    	  0.6,  	 3,    	0.8,   		0.3, 		3, 	 		  25, 	  	  0.6, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
 var preset_Zek100 = [9.8,  	  1.8,  	 3.2,  	2.6,   		0.7, 		2.9,  		  25, 	  	  1.8, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
