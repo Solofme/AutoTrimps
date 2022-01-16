@@ -1057,7 +1057,6 @@ function Praiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						mapbought5 = true;
-						mapBought = true;
 						if (mapbought5) {
 							pMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("5th map bought");
@@ -1070,7 +1069,6 @@ function Praiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						mapbought4 = true;
-						mapBought = true;
 						if (mapbought4) {
 							pMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("4th map bought");
@@ -1083,7 +1081,6 @@ function Praiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						mapbought3 = true;
-						mapBought = true;
 						if (mapbought3) {
 							pMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("3rd map bought");
@@ -1096,7 +1093,6 @@ function Praiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						mapbought2 = true;
-						mapBought = true;
 						if (mapbought2) {
 							pMap2 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("2nd map bought");
@@ -1109,7 +1105,6 @@ function Praiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						mapbought1 = true;
-						mapBought = true;
 						if (mapbought1) {
 							pMap1 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("1st map bought");
@@ -1592,7 +1587,6 @@ function dailyPraiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						dmapbought5 = true;
-						mapBought = true;
 						if (dmapbought5) {
 							dpMap5 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("5th map bought");
@@ -1605,7 +1599,6 @@ function dailyPraiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						dmapbought4 = true;
-						mapBought = true;
 						if (dmapbought4) {
 							dpMap4 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("4th map bought");
@@ -1618,7 +1611,6 @@ function dailyPraiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						dmapbought3 = true;
-						mapBought = true;
 						if (dmapbought3) {
 							dpMap3 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("3rd map bought");
@@ -1631,7 +1623,6 @@ function dailyPraiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						dmapbought2 = true;
-						mapBought = true;
 						if (dmapbought2) {
 							dpMap2 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("2nd map bought");
@@ -1644,7 +1635,6 @@ function dailyPraiding() {
 					if ((updateMapCost(true) <= game.resources.fragments.owned)) {
 						buyMap();
 						dmapbought1 = true;
-						mapBought = true;
 						if (dmapbought1) {
 							dpMap1 = game.global.mapsOwnedArray[game.global.mapsOwnedArray.length - 1].id;
 							debug("1st map bought");
