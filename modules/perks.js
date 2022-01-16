@@ -8,18 +8,18 @@ queuescript.type = 'text/javascript';
 queuescript.src = 'https://Solofme.github.io/AutoTrimps/FastPriorityQueue.js';
 head.appendChild(queuescript);
 if (game.global.universe == 1) {
-//[looting,toughness,power,motivation,pheromones,artisanistry,carpentry,resilience,coordinated,resourceful,overkill,cunning,curious,classy]
-var preset_space = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var preset_Zek059 = [7, 0.6, 3, 0.8, 0.3, 3, 25, 0.6, 0, 0, 0, 0, 0, 0];
-var preset_Zek100 = [9.8, 1.8, 3.2, 2.6, 0.7, 2.9, 25, 1.8, 0, 0, 0, 0, 0, 0];
-var preset_Zek180 = [13, 1.3, 4, 2.6, 0.7, 2.9, 25, 1.3, 37, 0.05, 1, 0, 0, 0];
-var preset_Zek229 = [11.2, 0.58, 2.37, 1.464, 0.3, 2.02, 12.2, 0.58, 39, 0.22, 2.2, 0, 0, 0];
-var preset_Zek299 = [16.8, 3, 1.9, 1.1, 1.2, 1, 17.1, 3, 105, 0.06, 0.8, 0, 0];
-var preset_Zek399 = [135, 6.1, 18.5, 6.5, 2.5, 6, 17, 6.1, 28, 0.08, 1, 0, 0];
-var preset_Zek449 = [245, 5.85, 29, 1.95, 2.8, 6, 6.1, 5.85, 18, 0.05, 1, 57, 0, 0];
-var preset_Zek450 = [450, 0.9, 48, 3.35, 1, 2.8, 7.8, 1.95, 10, 0.03, 1, 120, 175, 0];
-var preset_Zek500 = [600, 2.4, 60, 2, 1, 2.5, 8, 2.4, 8, 0.02, 1, 145, 180, 130];
-var preset_Zek550 = [700, 2.8, 70, 1.4, 1, 2.2, 7.5, 2.8, 8, 0.003, 1, 50, 80, 45];
+                    [looting, toughness, power,	motivation,	pheromones,	artisanistry, carpentry,  resilience, coordinated, resourceful,	overkill, cunning, curious,	classy]
+var preset_space  = [0,    	  0, 	 	 0,    	0, 	  		0,   		0, 	 		  0, 	  	  0, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
+var preset_Zek059 = [7,    	  0.6,  	 3,    	0.8,   		0.3, 		3, 	 		  25, 	  	  0.6, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
+var preset_Zek100 = [9.8,  	  1.8,  	 3.2,  	2.6,   		0.7, 		2.9,  		  25, 	  	  1.8, 	  	  0, 	  	   0, 	  		0, 	 	  0,   	   0,   	0];
+var preset_Zek180 = [13,   	  1.3,  	 4,    	2.6,   		0.7, 		2.9,  		  25, 	  	  1.3, 	  	  37, 	  	   0.05,   		1, 	 	  0,   	   0,   	0];
+var preset_Zek229 = [11.2, 	  0.58, 	 2.37, 	1.464, 		0.3, 		2.02, 		  12.2, 	  0.58,   	  39,     	   0.22,   		2.2, 	  0,   	   0, 		0];
+var preset_Zek299 = [16.8, 	  3, 	 	 1.9,  	1.1,   		1.2, 		1, 	 		  17.1, 	  3, 	  	  105,    	   0.06,   		0.8, 	  0,   	   0,       0];
+var preset_Zek399 = [135,  	  6.1,  	 18.5, 	6.5,   		2.5, 		6, 	 		  17, 	  	  6.1, 	  	  28, 	  	   0.08,   		1, 	 	  0,   	   0,       0];
+var preset_Zek449 = [245,  	  5.85, 	 29,   	1.95,  		2.8, 		6, 	 		  6.1, 	  	  5.85,   	  18,     	   0.05,   		1,   	  57,  	   0, 		0];
+var preset_Zek450 = [450,  	  0.9,  	 48,   	3.35,  		1,   		2.8,  		  7.8, 	  	  1.95,   	  10,     	   0.03,   		1,   	  120, 	   175, 	0];
+var preset_Zek500 = [600,  	  2.4,  	 60,   	2, 	  		1,   		2.5,  		  8, 	  	  2.4,    	  8, 	  	   0.02,   		1, 	 	  145, 	   180, 	130];
+var preset_Zek550 = [700,  	  2.8,  	 70,   	1.4,   		1,   		2.2,  		  7.5, 	  	  2.8, 	  	  8, 	  	   0.003,  		1,   	  50,  	   80, 		45];
 var presetList = [preset_Zek059,preset_Zek100,preset_Zek180,preset_Zek229,preset_Zek299,preset_Zek399,preset_Zek449,preset_Zek450,preset_Zek500,preset_Zek550,preset_space];
 var presetListHtml = "\
 <option id='preset_Zek059'>Zeker0 (z1-59)</option>\
