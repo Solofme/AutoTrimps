@@ -143,7 +143,7 @@ function plusMapToRun5() {
 }
 
 function plusPres1() {
-	document.getElementById("biomeAdvMapsSelect").value = getPageSetting("mapselection");
+	document.getElementById("biomeAdvMapsSelect").value = autoTrimpSettings.mapselection.selected == "Gardens" ? "Plentiful" : autoTrimpSettings.mapselection.selected;
 	document.getElementById("advExtraLevelSelect").value = plusMapToRun1();
 	document.getElementById("advSpecialSelect").value = "p";
 	document.getElementById("lootAdvMapsRange").value = 0;
@@ -244,7 +244,7 @@ function plusPres1() {
 }
 
 function plusPres2() {
-	document.getElementById("biomeAdvMapsSelect").value = getPageSetting("mapselection");
+	document.getElementById("biomeAdvMapsSelect").value = autoTrimpSettings.mapselection.selected == "Gardens" ? "Plentiful" : autoTrimpSettings.mapselection.selected;
 	document.getElementById("advExtraLevelSelect").value = plusMapToRun2();
 	document.getElementById("advSpecialSelect").value = "p";
 	document.getElementById("lootAdvMapsRange").value = 0;
@@ -345,7 +345,7 @@ function plusPres2() {
 }
 
 function plusPres3() {
-	document.getElementById("biomeAdvMapsSelect").value = getPageSetting("mapselection");
+	document.getElementById("biomeAdvMapsSelect").value = autoTrimpSettings.mapselection.selected == "Gardens" ? "Plentiful" : autoTrimpSettings.mapselection.selected;
 	document.getElementById("advExtraLevelSelect").value = plusMapToRun3();
 	document.getElementById("advSpecialSelect").value = "p";
 	document.getElementById("lootAdvMapsRange").value = 0;
@@ -446,7 +446,7 @@ function plusPres3() {
 }
 
 function plusPres4() {
-	document.getElementById("biomeAdvMapsSelect").value = getPageSetting("mapselection");
+	document.getElementById("biomeAdvMapsSelect").value = autoTrimpSettings.mapselection.selected == "Gardens" ? "Plentiful" : autoTrimpSettings.mapselection.selected;
 	document.getElementById("advExtraLevelSelect").value = plusMapToRun4();
 	document.getElementById("advSpecialSelect").value = "p";
 	document.getElementById("lootAdvMapsRange").value = 0;
@@ -547,7 +547,7 @@ function plusPres4() {
 }
 
 function plusPres5() {
-	document.getElementById("biomeAdvMapsSelect").value = getPageSetting("mapselection");
+	document.getElementById("biomeAdvMapsSelect").value = autoTrimpSettings.mapselection.selected == "Gardens" ? "Plentiful" : autoTrimpSettings.mapselection.selected;
 	document.getElementById("advExtraLevelSelect").value = plusMapToRun5();
 	document.getElementById("advSpecialSelect").value = "p";
 	document.getElementById("lootAdvMapsRange").value = 0;
@@ -1119,6 +1119,11 @@ function Praiding() {
 						pMap3 = undefined;
 						pMap4 = undefined;
 						pMap5 = undefined;
+						mapbought1 = false;
+						mapbought2 = false;
+						mapbought3 = false;
+						mapbought4 = false;
+						mapbought5 = false;
 						debug("Failed to Prestige Raid. Looks like you can't afford to or you are too weak or you have limited yourself in a P/I zone. ");
 					}
 					return;
@@ -1130,29 +1135,25 @@ function Praiding() {
 				runMap();
 				repMap1 = pMap1;
 				pMap1 = undefined;
-			}
-			if (game.global.preMapsActive && !game.global.mapsActive && mapbought2 && pMap2 != undefined && !prestraid) {
+			} else if (game.global.preMapsActive && !game.global.mapsActive && mapbought2 && pMap2 != undefined && !prestraid) {
 				debug("running map 2");
 				selectMap(pMap2);
 				runMap();
 				repMap2 = pMap2;
 				pMap2 = undefined;
-			}
-			if (game.global.preMapsActive && !game.global.mapsActive && mapbought3 && pMap3 != undefined && !prestraid) {
+			} else if (game.global.preMapsActive && !game.global.mapsActive && mapbought3 && pMap3 != undefined && !prestraid) {
 				debug("running map 3");
 				selectMap(pMap3);
 				runMap();
 				repMap3 = pMap3;
 				pMap3 = undefined;
-			}
-			if (game.global.preMapsActive && !game.global.mapsActive && mapbought4 && pMap4 != undefined && !prestraid) {
+			} else if (game.global.preMapsActive && !game.global.mapsActive && mapbought4 && pMap4 != undefined && !prestraid) {
 				debug("running map 4");
 				selectMap(pMap4);
 				runMap();
 				repMap4 = pMap4;
 				pMap4 = undefined;
-			}
-			if (game.global.preMapsActive && !game.global.mapsActive && mapbought5 && pMap5 != undefined && !prestraid) {
+			} else if (game.global.preMapsActive && !game.global.mapsActive && mapbought5 && pMap5 != undefined && !prestraid) {
 				debug("running map 5");
 				selectMap(pMap5);
 				runMap();
@@ -1167,11 +1168,6 @@ function Praiding() {
 	if (game.global.preMapsActive && (mapbought1 || mapbought2 || mapbought3 || mapbought4 || mapbought5) && pMap1 == undefined && pMap2 == undefined && pMap3 == undefined && pMap4 == undefined && pMap5 == undefined && !prestraid && !failpraid) {
 		prestraid = true;
 		failpraid = false;
-		mapbought1 = false;
-		mapbought2 = false;
-		mapbought3 = false;
-		mapbought4 = false;
-		mapbought5 = false;
 	}
 	if (getPageSetting('AutoMaps') == 0 && game.global.preMapsActive && prestraid && !failpraid && prestraidon) {
 		praidDone = true;
@@ -1203,6 +1199,11 @@ function Praiding() {
 		pMap3 = undefined;
 		pMap4 = undefined;
 		pMap5 = undefined;
+		mapbought1 = false;
+		mapbought2 = false;
+		mapbought3 = false;
+		mapbought4 = false;
+		mapbought5 = false;
 		debug("Prestige raiding successful!");
 		debug("Turning AutoMaps back on");
 	}
