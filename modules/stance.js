@@ -362,5 +362,8 @@ function windStance() {
             dhighHeirloom();
         }
     }
+    if (stancey < 5 && getPageSetting("UseScryerStance")) {
+        stancey = 4;
+    }
     setFormation(stancey);
 }
