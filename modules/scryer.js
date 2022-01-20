@@ -12,6 +12,22 @@ function useScryerStance() {
 
 	}
 
+	if (getPageSetting('AutoStance') == 3) {
+		var windstackState = calcCurrentStance();
+		switch (windstackState){
+			case 2:
+			case 0:
+			case 1:
+				lowHeirloom();
+				break;
+			case 12:
+			case 10:
+			case 11:
+				highHeirloom();
+				break;
+		}
+	}
+
 	if (!getPageSetting('UseScryerStance') || game.global.preMapsActive || game.global.gridArray.length === 0 || game.global.highestLevelCleared < 180 || game.global.world <= 60) {
 		autostancefunction();
 		return;

@@ -293,6 +293,7 @@ function windStance() {
     if (game.global.soldierHealth <= 0) return;
     if (!game.upgrades.Formations.done) return;
     if (game.global.world <= 70) return;
+
     var stancey = 2;
     if (game.global.challengeActive != "Daily") {
 	if (calcCurrentStance() == 5) {
@@ -361,9 +362,6 @@ function windStance() {
             stancey = 1;
             dhighHeirloom();
         }
-    }
-    if (stancey < 5 && getPageSetting("UseScryerStance")) {
-        stancey = 4;
     }
     setFormation(stancey);
 }

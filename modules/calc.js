@@ -549,7 +549,7 @@ function calcCurrentStance() {
     if (game.global.fighting) {
         ehealth = (getCurrentEnemy().maxHealth - getCurrentEnemy().health);
     }
-    var attacklow = calcOurDmg("max", false, true);
+    var attacklow = calcOurDmg("min", false, true);
     var attackhigh = calcOurDmg("max", false, true);
 
     //Heirloom Calc
